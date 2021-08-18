@@ -1,0 +1,18 @@
+<div class="container">
+  
+
+  <ul>
+    <% @flats.each do |flat| %>
+      <li>
+          <div class="card">
+          <%= flat.name %> <br>
+          <%= flat.address %>
+          <%= link_to "See the details", flat_path(flat) %>
+          <i class="fas fa-user-friends"></i>
+          <i class="fas fa-euro-sign"></i>
+          <hr>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

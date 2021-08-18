@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    <nav class="navbar">
+      <a href="/" class="logo">My own Airbnb clone</a>
+      <div>
+        <%= simple_form_for :search, url: root_path, method: "GET" do |f| %>
+          <%= f.input :name %>
+          <%= f.submit "Search" %>
+        <% end %>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>
